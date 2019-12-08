@@ -49,7 +49,7 @@ def diagnostic_code(memory, input_id):
             memory[param_3] = int(operator(memory[param_1] if mode_1 == 0 else param_1,
                                            memory[param_2] if mode_2 == 0 else param_2))
             pointer += 4
-        modes_and_opcode = str(memory[pointer]).rjust(5, '0')
+        modes_and_opcode = str(memory[pointer]).rjust(4, '0')
         opcode = int(modes_and_opcode[-2:])
     return output
 
