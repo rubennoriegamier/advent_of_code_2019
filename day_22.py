@@ -1,6 +1,5 @@
 import fileinput
 import re
-from itertools import islice
 
 
 def main():
@@ -10,7 +9,7 @@ def main():
 
 def part_1(techniques):
     shuffler = Shuffler(10_007, techniques)
-    return next(islice(shuffler.positions(2019), len(techniques) - 1, None))
+    return list(shuffler.positions(2019))[-1]
 
 
 class Shuffler:
